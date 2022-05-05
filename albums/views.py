@@ -14,3 +14,14 @@ def album_details(request, pk):
     return render(request, "albums/album_details.html", {
         "album": album
     })
+
+def create_album(request):
+    if request.method == 'GET':
+        form = AlbumForm()
+    else:
+        form = AlbumForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect(to='list_albums')
+
+    return render(request, "albums/create_album.html", {"form": form})
