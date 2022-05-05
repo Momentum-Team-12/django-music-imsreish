@@ -3,9 +3,11 @@
 
 <div>
   {% for album in albums %}
-    <h2>
-      {{ album.title }}
+    <h2><a href="{% url 'album_details' pk=album.pk %}">{{ album.title }}</a>
     </h2>
+    <p>
+      {{ album.artist }}
+    </p>
     {% endfor %}
 </div>
 

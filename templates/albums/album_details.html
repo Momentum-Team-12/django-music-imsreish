@@ -1,0 +1,18 @@
+{% extends "base.html" %} {% block content %}
+<a href="{% url 'list_albums'%}">Back to Overview</a>
+<br>
+<div>
+    <div>
+        <h1>Album art goes here</h1>
+    </div>
+    <div>
+        {{ album.title }}
+    </div>
+    <div>
+        {{ album.artist }}
+    </div>
+    <div>
+        <!-- <div>Created on {{ album.created_at }} </div> -->
+    </div>
+</div>
+{% endblock %}
