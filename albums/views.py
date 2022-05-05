@@ -6,5 +6,5 @@ from .forms import AlbumForm
 # Create your views here.
 def list_albums(request):
     albums = Album.objects.all()
-    return render(request, "",
+    return render(request, "albums/list_albums.html",
                 {"albums": albums})

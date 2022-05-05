@@ -9,5 +9,3 @@ class AlbumForm(forms.ModelForm):
             'title',
             'artist',
         ]
-
-
