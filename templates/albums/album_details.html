@@ -12,7 +12,11 @@
         {{ album.artist }}
     </div>
     <div>
-        <!-- <div>Created on {{ album.created_at }} </div> -->
+        <div>Created {{ album.date_created }} </div>
+    </div>
+    <div>Last updated {{ album.date_modified }} </div>
+    <div>
+        <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a>
     </div>
 </div>
 {% endblock %}
