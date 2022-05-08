@@ -4,6 +4,7 @@
 <div>
     <div>
         <h1>Album art goes here</h1>
+        <img src="{{ album.album_art }}" alt="">
     </div>
     <div>
         {{ album.title }}
@@ -17,6 +18,7 @@
     <div>Last updated {{ album.date_modified }} </div>
     <div>
         <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a>
+        <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
     </div>
 </div>
 {% endblock %}
