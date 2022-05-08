@@ -61,7 +61,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "debug_toolbar.middleware.DebugToolbarMiddleware",
-    'django_music.middleware.timezone_middleware.TimezoneMiddleWare',
 ]
 
 ROOT_URLCONF = 'django_music.urls'
