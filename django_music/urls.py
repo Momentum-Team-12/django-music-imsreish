@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.conf import settings
 from django.urls import path, include
+from django.conf.urls.static import static
 from albums import views as albums_views
 
 urlpatterns = [
@@ -25,8 +26,8 @@ urlpatterns = [
     path('albums/add/', albums_views.create_album, name='create_album'),
     path('albums/<int:pk>/edit', albums_views.edit_album, name='edit_album'),
     path('albums/<int:pk>/delete', albums_views.delete_album, name='delete_album'),
-    path('__debug__/', include('debug_toolbar.urls')),
-]
+    path('__debug__/', include('debug_toolbar.urls'))
+    ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:
     import debug_toolbar
