@@ -21,6 +21,7 @@ from albums import views as albums_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('accounts/', include('registration.backends.simple.urls')),
     path('', albums_views.list_albums, name='list_albums'),
     path('albums/<int:pk>/', albums_views.album_details, name='album_details'),
     path('albums/add/', albums_views.create_album, name='create_album'),
