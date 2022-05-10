@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block content %}
+<a href="{% url 'list_albums'%}">Back to Overview</a>
+<br>
+<div>
+    <div>
+        <img src="{{ album.album_art }}" alt="Album art for {{ album.title }}">
+    </div>
+    <div>
+        {{ album.title }}
+    </div>
+    <div>
+        {{ album.artist }}
+    </div>
+    <div>
+        <div>Created {{ album.date_created }} </div>
+    </div>
+    <div>Last updated {{ album.date_modified }} </div>
+    <div>
+        <a href="{% url 'edit_album' pk=album.pk %}">Edit Album</a>
+        <a href="{% url 'delete_album' pk=album.pk %}">Delete Album</a>
+    </div>
+</div>
+{% endblock %}

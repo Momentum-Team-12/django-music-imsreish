@@ -1,0 +1,25 @@
+models
+- Album
+    - fields:
+        - title
+        - artist
+        - created_at
+
+views               urls                            methods
+- albums_list       - ""                            - GET
+- create_album      - /albums/new/                  - GET, POST
+- album_details     - /albums/<int:pk>/             - GET
+- edit_album        - /albums/<int:pk>/edit/        - GET, POST
+- delete_album      - /albums/<int:pk>/delete/      - POST
+
+templates
+-
+
+urls
+-
+
+forms
+- search bar (itunes api)
+
+admin
+-

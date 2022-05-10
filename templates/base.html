@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uptact</title>
+    <!-- <link rel="stylesheet" href="{% static 'css/tachyons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'icofont/icofont.min.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap');
+        </style>
+</head>
+<body class="sans-serif pv3 ph2">
+    <h1>Welcome to Django Music</h1>
+    <div>{% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
